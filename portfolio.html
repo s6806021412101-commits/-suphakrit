@@ -1,46 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Suphakrit Sasiatikhom</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #222;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    h2 {
+      color: #1b1b8a;
+      border-bottom: 3px solid #9b59b6;
+      padding-bottom: 5px;
+      margin-top: 40px;
+      font-weight: 700;
+    }
+    h3 {
+      margin: 10px 0 5px;
+      font-weight: 600;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 25px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .year {
+      font-weight: bold;
+      color: #555;
+    }
+    .sub {
+      margin-left: 20px;
+      font-size: 0.95em;
+      color: #444;
+    }
+    .hobbies {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+    .hobby {
+      text-align: center;
+      width: 120px;
+      margin: 10px;
+    }
+    .hobby img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 8px;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <div class="container header-inner">
-    <a class="logo" href="index.html">Suphakrit<span>.</span></a>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="section intro" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title">Portfolio</h2>
-      <p class="center">
-        Here you can showcase your projects. Add screenshots, descriptions, and links to live demos or GitHub repositories.
-      </p>
-    </div>
-  </section>
-</main>
-
-<footer>
   <div class="container">
-    <p>© 2025 Suphakrit Sasiatikhom — <a href="mailto:s6806021412101@email.kmutnb.ac.th">Email me</a></p>
-  </div>
-</footer>
+    <h1>Portfolio</h1>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({ once:true });</script>
+    <div class="section">
+      <h2>Education</h2>
+      <p class="year">2023–2025</p>
+      <h3>High Diploma</h3>
+      <p class="sub">• Digital Business Technology in Suratthani Vocational College, Suratthani</p>
+
+      <p class="year">2020–2023</p>
+      <h3>Diploma</h3>
+      <p class="sub">• Business Computer in Kanchanaburi Vocational College, Suratthani</p>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <p class="year">2024</p>
+      <h3>Trainee</h3>
+      <p class="sub">at Suratthani Vocational College, Suratthani</p>
+      <ul>
+        <li>Answered the telephone</li>
+        <li>Used Word Processing</li>
+        <li>Operated Office Runner</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Skill</h2>
+      <ul>
+        <li>Collaboration, Teamwork & Leadership</li>
+        <li>Communications, Information & Media Literacy</li>
+        <li>Computing & ICT Literacy</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Hobbies</h2>
+      <div class="hobbies">
+        <div class="hobby">
+          <img src="assets/icons/tech.png" alt="Tech icon">
+          <p>New technologies</p>
+        </div>
+        <div class="hobby">
+          <img src="assets/icons/fitness.png" alt="Fitness icon">
+          <p>Fitness</p>
+        </div>
+        <div class="hobby">
+          <img src="assets/icons/camera.png" alt="Camera icon">
+          <p>Photography</p>
+        </div>
+        <div class="hobby">
+          <img src="assets/icons/travel.png" alt="Travel icon">
+          <p>Travel</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
