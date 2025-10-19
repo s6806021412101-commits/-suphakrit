@@ -1,92 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — Suphakrit Sasiatikhom</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | Suphakrit Sasiatikhom</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #eaf8f2;
+      color: #222;
+      margin: 0;
+    }
+
+    header {
+      background-color: #a8dbc3;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    .about-box {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      max-width: 800px;
+      margin: 80px auto;
+    }
+
+    .about-box h2 {
+      color: #6ab497;
+      border-left: 5px solid #6ab497;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    .about-box p {
+      margin: 8px 0;
+      font-size: 1.1rem;
+    }
+
+    .hobbies {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .hobby {
+      text-align: center;
+      font-size: 1rem;
+      color: #222;
+    }
+
+    .hobby i {
+      font-size: 2.5rem;
+      color: #6ab497;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header id="header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">Suphakrit<span>.</span></a>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link active">About</a></li>
-          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+
+  <header>
+    <h1>Suphakrit.</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" style="text-decoration: underline;">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <!-- About Section -->
-  <main>
-    <section class="section about" data-aos="fade-up">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p class="center">
-          I'm Suphakrit Sasiatikhom — a 1st-year ITI student passionate about web technologies,
-          front-end development, and creative digital projects. I enjoy learning new skills
-          and exploring ways to make beautiful and functional designs.
-        </p>
-      </div>
-    </section>
+  <div class="about-box">
+    <h2>About Me</h2>
+    <p><strong>Full Name:</strong> Suphakrit Sasiatikhom</p>
+    <p><strong>Nickname:</strong> Krit</p>
+    <p><strong>Age:</strong> 22</p>
+    <p><strong>Interests:</strong> Web Development, Design, AI</p>
 
-    <!-- Personal Info -->
-    <section class="section personal-info" data-aos="fade-up">
-      <div class="container">
-        <h2 class="section-title">Personal Information</h2>
-        <div class="info-grid">
-          <div class="info-item"><strong>Full Name:</strong> Suphakrit Sasiatikhom</div>
-          <div class="info-item"><strong>Nickname:</strong> Krit</div>
-          <div class="info-item"><strong>Age:</strong> 22</div>
-          <div class="info-item"><strong>Interests:</strong> Web Development, Design, AI</div>
-        </div>
+    <h2>Hobbies</h2>
+    <div class="hobbies">
+      <div class="hobby">
+        <i class="fas fa-laptop-code"></i>
+        <p>New technologies</p>
       </div>
-    </section>
-
-    <!-- Hobbies -->
-    <section class="section hobbies" data-aos="fade-up">
-      <div class="container">
-        <h2 class="section-title">Hobbies</h2>
-        <div class="hobby-grid">
-          <div class="hobby-item">
-            <i class="fas fa-laptop-code"></i>
-            <p>New technologies</p>
-          </div>
-          <div class="hobby-item">
-            <i class="fas fa-dumbbell"></i>
-            <p>Fitness</p>
-          </div>
-          <div class="hobby-item">
-            <i class="fas fa-camera"></i>
-            <p>Photography</p>
-          </div>
-          <div class="hobby-item">
-            <i class="fas fa-map-marked-alt"></i>
-            <p>Travel</p>
-          </div>
-        </div>
+      <div class="hobby">
+        <i class="fas fa-dumbbell"></i>
+        <p>Fitness</p>
       </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>© 2025 Suphakrit Sasiatikhom — <a href="mailto:s6806021412101@email.kmutnb.ac.th">Email me</a></p>
+      <div class="hobby">
+        <i class="fas fa-camera"></i>
+        <p>Photography</p>
+      </div>
+      <div class="hobby">
+        <i class="fas fa-map"></i>
+        <p>Travel</p>
+      </div>
     </div>
+  </div>
+
+  <footer>
+    © 2025 Suphakrit Sasiatikhom
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once:true });
-  </script>
 </body>
 </html>
