@@ -5,106 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Suphakrit Sasiatikhom</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
   <style>
-    :root {
-      --main-color: #1abc9c;
-      --bg-light: #f9f9f9;
-      --text-dark: #222;
-    }
-
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-dark);
+      background-color: #eaf8f2;
+      color: #222;
       margin: 0;
     }
 
-    /* ---------- Navbar ---------- */
     header {
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: white;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      z-index: 999;
-    }
-
-    nav {
-      max-width: 1100px;
-      margin: auto;
-      padding: 15px 25px;
+      background-color: #a8dbc3;
+      padding: 20px 50px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
-    nav h1 {
+    header h1 {
+      color: #fff;
       font-weight: 700;
-      font-size: 1.3rem;
-      color: var(--main-color);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      margin: 0;
+      font-size: 1.5rem;
     }
 
     nav a {
       text-decoration: none;
-      color: var(--text-dark);
+      color: #fff;
+      margin-left: 25px;
       font-weight: 500;
-      transition: 0.3s;
+      transition: opacity 0.3s;
     }
 
     nav a:hover {
-      color: var(--main-color);
+      opacity: 0.8;
     }
 
-    /* ---------- Contact ---------- */
-    .contact-container {
-      max-width: 700px;
-      margin: 120px auto 60px;
-      background: white;
+    .contact-box {
+      background: #fff;
       border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      padding: 50px 40px;
-      animation: fadeIn 0.6s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    .contact-container h1 {
+      padding: 40px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      max-width: 600px;
+      margin: 120px auto 60px;
       text-align: center;
-      color: var(--main-color);
-      font-size: 2rem;
+    }
+
+    h1 {
+      color: #6ab497;
       margin-bottom: 25px;
     }
 
-    .contact-info {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: #333;
+    p {
+      margin: 10px 0;
+      font-size: 1.1rem;
     }
 
-    .contact-info span {
-      font-weight: 600;
-      color: var(--main-color);
-    }
-
-    .contact-info a {
-      color: var(--main-color);
+    a {
+      color: #6ab497;
       text-decoration: none;
-      word-break: break-word;
     }
 
-    .contact-info a:hover {
+    a:hover {
       text-decoration: underline;
     }
 
@@ -113,47 +74,32 @@
       padding: 25px;
       color: #666;
       font-size: 0.9rem;
-      background: white;
-      border-top: 1px solid #eee;
-    }
-
-    @media (max-width: 600px) {
-      .contact-container {
-        padding: 35px 25px;
-      }
     }
   </style>
 </head>
 <body>
 
   <header>
+    <h1>Suphakrit.</h1>
     <nav>
-      <h1>Suphakrit</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html" style="color: var(--main-color);">Contact</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" style="text-decoration: underline;">Contact</a>
     </nav>
   </header>
 
-  <div class="contact-container">
+  <div class="contact-box">
     <h1>Contact Me</h1>
-    <div class="contact-info">
-      <p><span>FB :</span> Suphakrit Sasiatikhom</p>
-      <p><span>IG :</span> abcdefghj_krit</p>
-      <p><span>LINE :</span> @okss33</p>
-      <p><span>TIKTOK :</span> @meangginfun</p>
-      <p><span>Email :</span> 
-        <a href="mailto:s6806021412101@email.kmutnb.ac.th">
-          s6806021412101@email.kmutnb.ac.th
-        </a>
-      </p>
-    </div>
+    <p><strong>FB:</strong> Suphakrit Sasiatikhom</p>
+    <p><strong>IG:</strong> abcdefghj_krit</p>
+    <p><strong>LINE:</strong> @okss33</p>
+    <p><strong>TIKTOK:</strong> @meangginfun</p>
+    <p><strong>Email:</strong> <a href="mailto:s6806021412101@email.kmutnb.ac.th">s6806021412101@email.kmutnb.ac.th</a></p>
   </div>
 
   <footer>
-    © 2025 Suphakrit Sasiatikhom — All Rights Reserved
+    © 2025 Suphakrit Sasiatikhom
   </footer>
 
 </body>
