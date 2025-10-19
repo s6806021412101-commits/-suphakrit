@@ -1,0 +1,159 @@
+/* ================= Reset & Base ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0fdf4; /* พื้นหลังเขียวอ่อน */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ================= Container ================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ================= Header ================= */
+header {
+  padding: 20px 0;
+  background: #9AD3BC;
+}
+
+header .logo {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+/* ================= Hero Section ================= */
+.hero-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 50px auto;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  max-width: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  display: block;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-text h1 span {
+  color: #9AD3BC;
+}
+
+.hero-text .subtitle {
+  margin-bottom: 18px;
+  color: #555;
+}
+
+.hero-cta {
+  margin-top: 12px;
+}
+
+.hero-cta a {
+  margin-right: 12px;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #9AD3BC;
+  color: #fff;
+  font-weight: 500;
+}
+
+.hero-cta a.btn-outline {
+  background: transparent;
+  border: 2px solid #9AD3BC;
+  color: #9AD3BC;
+}
+
+/* ================= Section ================= */
+.section {
+  padding: 50px 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ================= Footer ================= */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #9AD3BC;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .hero-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-bottom: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
