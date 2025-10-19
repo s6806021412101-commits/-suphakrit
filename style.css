@@ -1,3 +1,40 @@
+/* ================= Header ================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f0fdf4; /* พื้นหลังเขียวอ่อน */
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  padding: 20px 0;
+  background: #9AD3BC;
+}
+
+header .logo {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
 /* ================= Hero Section ================= */
 .hero-card {
   display: flex;
@@ -9,7 +46,7 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   max-width: 900px;
   margin: 50px auto;
-  flex-wrap: wrap; /* รองรับมือถือ */
+  flex-wrap: wrap;
 }
 
 .hero-image {
@@ -48,4 +85,51 @@
 .hero-cta a {
   margin-right: 12px;
   text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #9AD3BC;
+  color: #fff;
+  font-weight: 500;
+}
+
+.hero-cta a.btn-outline {
+  background: transparent;
+  border: 2px solid #9AD3BC;
+  color: #9AD3BC;
+}
+
+/* ================= Section ================= */
+.section {
+  padding: 50px 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ================= Footer ================= */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #9AD3BC;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-bottom: 20px;
+  }
 }
