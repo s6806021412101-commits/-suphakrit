@@ -1,118 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Suphakrit Sasiatikhom</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      font-family: "Poppins", sans-serif;
-      background-color: #fafafa;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+    :root {
+      --main-color: #1abc9c;
+      --bg-light: #f9f9f9;
+      --text-dark: #222;
     }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+    }
+
+    /* ---------- Navbar ---------- */
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      z-index: 999;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav h1 {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--main-color);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--main-color);
+    }
+
+    /* ---------- Page Layout ---------- */
     .container {
       max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin: 120px auto 60px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      padding: 50px;
+      animation: fadeIn 0.7s ease-in-out;
     }
-    h1 {
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1.title {
       text-align: center;
-      color: #222;
-      font-weight: 700;
+      font-size: 2rem;
       margin-bottom: 40px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      color: var(--main-color);
     }
-    h2 {
-      color: #1b1b8a;
-      border-bottom: 3px solid #9b59b6;
-      padding-bottom: 5px;
-      margin-top: 40px;
-      font-weight: 700;
+
+    section {
+      margin-bottom: 40px;
     }
-    h3 {
-      margin: 10px 0 5px;
-      font-weight: 600;
+
+    section h2 {
+      border-left: 5px solid var(--main-color);
+      padding-left: 10px;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #333;
     }
-    ul {
-      list-style-type: disc;
-      margin-left: 25px;
-    }
-    .section {
-      margin-bottom: 30px;
-    }
+
     .year {
-      font-weight: bold;
-      color: #555;
+      font-weight: 500;
+      color: #666;
+      margin-top: 10px;
     }
+
+    ul {
+      margin-left: 25px;
+      line-height: 1.6;
+    }
+
     .sub {
-      margin-left: 20px;
-      font-size: 0.95em;
-      color: #444;
+      color: #555;
+      font-size: 0.95rem;
+      margin-left: 10px;
     }
+
+    /* ---------- Hobbies ---------- */
     .hobbies {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-around;
       margin-top: 25px;
-      flex-wrap: wrap;
+      gap: 20px;
     }
+
     .hobby {
       text-align: center;
       width: 120px;
-      margin: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: var(--bg-light);
+      border-radius: 15px;
+      padding: 20px 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
     }
+
+    .hobby:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
     .hobby img {
-      width: 50px;
-      height: 50px;
+      width: 55px;
+      height: 55px;
       margin-bottom: 8px;
+      filter: grayscale(30%);
+    }
+
+    .hobby p {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #666;
+      font-size: 0.9rem;
+      background: white;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+      nav ul {
+        gap: 15px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Portfolio</h1>
 
-    <div class="section">
+  <header>
+    <nav>
+      <h1>Suphakrit</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html" style="color: var(--main-color);">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 class="title">My Portfolio</h1>
+
+    <section>
       <h2>Education</h2>
       <p class="year">2023–2025</p>
-      <h3>High Diploma</h3>
-      <p class="sub">• Digital Business Technology in Suratthani Vocational College, Suratthani</p>
+      <p><strong>High Diploma</strong></p>
+      <p class="sub">Digital Business Technology in Suratthani Vocational College, Suratthani</p>
 
       <p class="year">2020–2023</p>
-      <h3>Diploma</h3>
-      <p class="sub">• Business Computer in Kanchanaburi Vocational College, Suratthani</p>
-    </div>
+      <p><strong>Diploma</strong></p>
+      <p class="sub">Business Computer in Kanchanaburi Vocational College, Suratthani</p>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>Experience</h2>
       <p class="year">2024</p>
-      <h3>Trainee</h3>
+      <p><strong>Trainee</strong></p>
       <p class="sub">at Suratthani Vocational College, Suratthani</p>
       <ul>
         <li>Answered the telephone</li>
         <li>Used Word Processing</li>
         <li>Operated Office Runner</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2>Skill</h2>
+    <section>
+      <h2>Skills</h2>
       <ul>
         <li>Collaboration, Teamwork & Leadership</li>
         <li>Communications, Information & Media Literacy</li>
         <li>Computing & ICT Literacy</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>Hobbies</h2>
       <div class="hobbies">
         <div class="hobby">
@@ -132,7 +240,12 @@
           <p>Travel</p>
         </div>
       </div>
-    </div>
+    </section>
   </div>
+
+  <footer>
+    © 2025 Suphakrit Sasiatikhom — All Rights Reserved
+  </footer>
+
 </body>
 </html>
