@@ -1,19 +1,27 @@
-// Add smooth scroll highlight effect
-const navLinks = document.querySelectorAll("nav ul li a");
+// Header shadow + active nav link based on pathname
+(function(){
+  const header = document.getElementById('header');
+  const navLinks = document.querySelectorAll('.nav-link');
 
-window.addEventListener("scroll", () => {
-  let current = "";
-  document.querySelectorAll("section").forEach((section) => {
-    const sectionTop = section.offsetTop - 60;
-    if (scrollY >= sectionTop) {
-      current = section.getAttribute("id");
+  // mark active by pathname
+  const path = location.pathname.split('/').pop() || 'index.html';
+  navLinks.forEach(a => {
+    const href = a.getAttribute('href');
+    if(href === path || (href === 'index.html' && path === '')) {
+      a.classList.add('active');
     }
   });
 
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href").includes(current)) {
-      link.classList.add("active");
-    }
+  // header shadow on scroll
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 50) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
   });
-});
+
+  // contact form placeholder handler (no server) — show simple success message
+  window.handleSubmit = function(e){
+    e.preventDefault();
+    alert('Thanks! Your message was not actually sent (no backend). To enable sending, integrate an email service or form backend.');
+    e.target.reset();
+  };
+})();
